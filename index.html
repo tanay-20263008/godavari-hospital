@@ -75,6 +75,8 @@
 }
 
 html { scroll-behavior: smooth; }
+img { content-visibility: auto; }
+* { -webkit-tap-highlight-color: transparent; }
 body {
   font-family: var(--font-body);
   background: var(--white);
@@ -845,7 +847,7 @@ footer { background: var(--blue-dark); }
 <nav class="navbar">
   <div class="nav-wrap">
     <div class="logo-area">
-      <img src="assets/logo.png" alt="Godavari Hospital Logo" class="logo-img" id="logoImg"
+      <img src="assets/logo.png" alt="Godavari Hospital Logo" class="logo-img" id="logoImg" fetchpriority="high"
            onerror="this.style.display='none';document.getElementById('logoFb').style.display='flex';">
       <div class="logo-fallback" id="logoFb">
         <div class="logo-mark"><span>G</span></div>
@@ -1013,7 +1015,7 @@ footer { background: var(--blue-dark); }
       <!-- SLIDE 1 — replace src with your actual photo paths -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp1.jpg" alt="Free Health Check-Up Camp Photo 1" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img src="assets/camp1.webp" alt="Free Health Check-Up Camp Photo 1" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1024,7 +1026,7 @@ footer { background: var(--blue-dark); }
       <!-- SLIDE 2 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp2.jpg" alt="Free Health Check-Up Camp Photo 2" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp2.webp" alt="Free Health Check-Up Camp Photo 2" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1035,7 +1037,7 @@ footer { background: var(--blue-dark); }
       <!-- SLIDE 3 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp3.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp3.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1046,7 +1048,7 @@ footer { background: var(--blue-dark); }
        <!-- SLIDE 4   -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp4.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp4.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1057,7 +1059,7 @@ footer { background: var(--blue-dark); }
        <!-- SLIDE 5 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp5.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp5.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1068,7 +1070,7 @@ footer { background: var(--blue-dark); }
        <!-- SLIDE 6 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp6.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp6.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1079,7 +1081,7 @@ footer { background: var(--blue-dark); }
        <!-- SLIDE 7 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp7.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp7.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1090,7 +1092,7 @@ footer { background: var(--blue-dark); }
        <!-- SLIDE 8 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp8.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp8.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1101,7 +1103,7 @@ footer { background: var(--blue-dark); }
        <!-- SLIDE 9 -->
       <div class="slide-item" style="min-width:100%;padding:0 48px;">
         <div style="background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;max-width:1400px;margin:0 auto;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
-          <img src="assets/camp9.jpg" alt="Free Health Check-Up Camp Photo 3" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
+          <img data-src="assets/camp9.webp" alt="Free Health Check-Up Camp Photo 3" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;border-radius:24px;" onerror="this.style.display='none'">
         </div>
         <div style="text-align:center;margin-top:20px;">
           <div style="font-family:var(--font-display);font-size:20px;color:#fff;font-weight:400;">Free Health Check-Up Camp — Nashik</div>
@@ -1141,7 +1143,7 @@ footer { background: var(--blue-dark); }
           <div class="dr-ring-out"></div>
           <div class="dr-ring-in"></div>
           <div class="dr-circle">
-  <img src="assets/dr-sandip-photo.jpg" alt="Dr. Sandip Ratan Patil" class="dr-photo">
+  <img src="assets/dr-sandip-photo.jpg" alt="Dr. Sandip Ratan Patil" class="dr-photo" loading="lazy" decoding="async">
             <div class="dr-tag"><div class="dr-tag-s">M.D. Medicine</div><div class="dr-tag-b">Physician &<br>Intensivist</div></div>
           </div>
         </div>
@@ -1471,13 +1473,15 @@ document.getElementById('apptForm').addEventListener('submit',function(e){
   this.reset();
 });
 
-/* Slideshow */
+/* Slideshow — Smart Loading */
 let curSlide=0,totalSlides=9,autoSlide;
+
 function moveSlide(dir){
   curSlide=(curSlide+dir+totalSlides)%totalSlides;
   updateSlide();
 }
 function goSlide(n){curSlide=n;updateSlide();}
+
 function updateSlide(){
   document.getElementById('slideTrack').style.transform=`translateX(-${curSlide*100}%)`;
   document.querySelectorAll('.sdot').forEach((d,i)=>{
@@ -1486,9 +1490,19 @@ function updateSlide(){
     d.style.width=i===curSlide?'28px':'10px';
     d.style.borderRadius='10px';
   });
+  /* Load only current + next slide images */
+  document.querySelectorAll('.slide-item img').forEach((img,i)=>{
+    if(i<=curSlide+1){
+      if(img.dataset.src){
+        img.src=img.dataset.src;
+        img.removeAttribute('data-src');
+      }
+    }
+  });
 }
+
 autoSlide=setInterval(()=>moveSlide(1),2500);
-const slideWrapper = document.getElementById('slideTrack').parentElement;
+const slideWrapper=document.getElementById('slideTrack').parentElement;
 slideWrapper.addEventListener('mouseenter',()=>clearInterval(autoSlide));
 slideWrapper.addEventListener('mouseleave',()=>{autoSlide=setInterval(()=>moveSlide(1),2500);});
 </script>
