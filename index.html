@@ -176,6 +176,39 @@ img { display: block; max-width: 100%; }
 .mob-nav .mob-cta { background: var(--grad-blue); color: #fff; padding: 14px 40px; border-radius: var(--r-full); font-family: var(--font-body); font-size: 14px; font-weight: 700; }
 .mob-x { position: absolute; top: 24px; right: 28px; font-size: 28px; color: var(--mid); cursor: pointer; border: none; background: none; }
 
+/* ── Dual Logo Slider ── */
+.logo-slider {
+  position: relative;
+  height: 52px;
+  width: 160px;
+  overflow: hidden;
+}
+.logo-slide {
+  position: absolute;
+  top: 0; left: 0;
+  height: 52px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.logo-slide-1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.logo-slide-2 {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.logo-slide-1.hide {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.logo-slide-2.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ═══════════════════════════════════════════
    HERO — Fresh gradient, no dark
 ═══════════════════════════════════════════ */
@@ -735,7 +768,7 @@ img { display: block; max-width: 100%; }
 /* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
-footer { background: var(--blue-dark); }
+footer { background: linear-gradient(to bottom, #1a5fa8 0%, #0a2d5c 40%, #06183a 100%); }
 .footer-inner { max-width:1320px;margin:0 auto;padding:0 48px; }
 .footer-top { display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;padding:72px 0 56px;border-bottom:1.5px solid rgba(255,255,255,.08); }
 .f-brand-desc { font-size:13.5px;color:rgba(255,255,255,.4);line-height:1.88;font-weight:400;max-width:280px;margin-top:18px; }
@@ -846,17 +879,19 @@ footer { background: var(--blue-dark); }
 <!-- Navbar -->
 <nav class="navbar">
   <div class="nav-wrap">
-    <div class="logo-area">
-      <img src="assets/logo.png" alt="Godavari Hospital Logo" class="logo-img" id="logoImg" fetchpriority="high"
-           onerror="this.style.display='none';document.getElementById('logoFb').style.display='flex';">
-      <div class="logo-fallback" id="logoFb">
-        <div class="logo-mark"><span>G</span></div>
-        <div class="logo-txt">
-          <div class="n">Godavari Multispeciality</div>
-          <div class="s">Hospital & Research Center Pvt Ltd · Nashik</div>
-        </div>
-      </div>
+<div class="logo-area">
+  <div class="logo-slider" id="logoSlider">
+    <img src="assets/logo.png" alt="Godavari Hospital Logo" class="logo-slide logo-slide-1" fetchpriority="high">
+    <img src="assets/logo2.png" alt="Godavari Hospital Logo 2" class="logo-slide logo-slide-2">
+  </div>
+  <div class="logo-fallback" id="logoFb" style="display:none;">
+    <div class="logo-mark"><span>G</span></div>
+    <div class="logo-txt">
+      <div class="n">Godavari Multispeciality</div>
+      <div class="s">Hospital & Research Center Pvt Ltd · Nashik</div>
     </div>
+  </div>
+</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#doctor">Doctors</a></li>
@@ -1420,7 +1455,7 @@ footer { background: var(--blue-dark); }
     <div class="footer-top">
       <div>
         <div class="logo-area">
-         <img src="assets/logo.png" alt="Godavari Hospital" class="logo-img" style="height:52px;" onerror="this.style.display='none';document.getElementById('ftrFb').style.display='flex';">
+        <img src="assets/logo.png" alt="Godavari Hospital" class="logo-img" style="height:52px;filter:brightness(0) invert(1);" onerror="this.style.display='none';document.getElementById('ftrFb').style.display='flex';">
           <div class="logo-fallback" id="ftrFb" style="display:none;">
             <div class="logo-mark" style="width:46px;height:46px;"><span style="font-size:22px">G</span></div>
             <div class="logo-txt"><div class="n" style="color:#fff;font-size:16px;">Godavari Multispeciality</div><div class="s">Hospital & Research Center Pvt Ltd</div></div>
@@ -1458,6 +1493,21 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 /* Stagger cards */
 document.querySelectorAll('.dept-card').forEach((el,i)=>{el.style.transitionDelay=`${(i%4)*.06}s`;});
 document.querySelectorAll('.fac-card').forEach((el,i)=>{el.style.transitionDelay=`${(i%3)*.07}s`;});
+
+/* Dual Logo Switcher */
+const logo1 = document.querySelector('.logo-slide-1');
+const logo2 = document.querySelector('.logo-slide-2');
+if(logo1 && logo2){
+  setInterval(()=>{
+    if(logo1.classList.contains('hide')){
+      logo1.classList.remove('hide');
+      logo2.classList.remove('show');
+    } else {
+      logo1.classList.add('hide');
+      logo2.classList.add('show');
+    }
+  }, 3500);
+}
 
 /* Appointment Form → Opens Gmail */
 document.getElementById('apptForm').addEventListener('submit',function(e){
