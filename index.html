@@ -1470,7 +1470,7 @@ footer { background: linear-gradient(to bottom, #1a5fa8 0%, #0a2d5c 40%, #06183a
     </div>
     <div class="footer-bottom">
       <div class="f-copy">© 2026 Godavari Multispeciality Hospital & Research Center Pvt Ltd, Nashik. All rights reserved.</div>
-      <div class="f-credit" style="font-size:14px;font-weight:700;color:#ffffff;letter-spacing:.06em;opacity:0.75;">Designed & Developed by Tanay Shinde </div>    </div>
+      <a href="https://www.scaleemailer.com/" target="_blank" rel="noopener" class="f-credit" style="font-size:14px;font-weight:700;color:#ffffff;letter-spacing:.06em;opacity:0.75;text-decoration:none;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.75'">Designed & Developed by Tanay Shinde </a>    </div>
   </div>
 </footer>
 
@@ -1523,6 +1523,11 @@ document.getElementById('apptForm').addEventListener('submit',function(e){
   this.reset();
 });
 
+// Preload all slides on page load
+document.querySelectorAll('.slide-item img[data-src]').forEach(img=>{
+  const preload=new Image();
+  preload.src=img.dataset.src;
+});
 /* Slideshow — Smart Loading */
 let curSlide=0,totalSlides=9,autoSlide;
 
@@ -1540,13 +1545,11 @@ function updateSlide(){
     d.style.width=i===curSlide?'28px':'10px';
     d.style.borderRadius='10px';
   });
-  /* Load only current + next slide images */
-  document.querySelectorAll('.slide-item img').forEach((img,i)=>{
-    if(i<=curSlide+1){
-      if(img.dataset.src){
-        img.src=img.dataset.src;
-        img.removeAttribute('data-src');
-      }
+  /* Preload ALL slide images immediately */
+document.querySelectorAll('.slide-item img').forEach((img)=>{
+    if(img.dataset.src){
+      img.src=img.dataset.src;
+      img.removeAttribute('data-src');
     }
   });
 }
