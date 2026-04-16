@@ -1171,6 +1171,247 @@ footer { background: linear-gradient(to bottom, #1a5fa8 0%, #0a2d5c 40%, #06183a
   </div>
 </section>
 
+
+
+<!-- ══════════════════════════════════════════════════════
+     VIDEOS SECTION — WORKING NOW with YouTube Thumbnail Player
+     Looks like embedded video but opens in YouTube lightbox
+════════════════════════════════════════════════════════ -->
+
+<section class="section" id="videos" style="background: linear-gradient(150deg,#f0f8ff 0%,#f4fff0 50%,#fffbef 100%); padding: 100px 0; overflow: hidden;">
+  <div class="wrap">
+
+    <!-- Section Header -->
+    <div style="text-align: center; margin-bottom: 64px;">
+      <div class="sec-label reveal" style="justify-content: center;">
+        <div class="sec-label-bar"></div>
+        <div class="sec-label-text">Watch & Learn</div>
+        <div class="sec-label-bar"></div>
+      </div>
+      <h2 class="sec-h2 reveal d1" style="text-align: center;">
+        Our Hospital <em>in Action</em>
+      </h2>
+      <p class="sec-sub reveal d2" style="margin: 0 auto; text-align: center;">
+        Watch our free health camp, explore our hospital facilities, and get expert summer health tips from Dr. Sandip Patil — all in one place.
+      </p>
+    </div>
+
+    <!-- Three Video Cards Grid -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: start;" class="videos-grid">
+
+      <!-- VIDEO 1 — Free Health Camp -->
+      <div class="reveal" style="background: #fff; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 40px rgba(26,114,184,.12); border: 1.5px solid rgba(26,114,184,.1); transition: transform .3s, box-shadow .3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 24px 64px rgba(26,114,184,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 40px rgba(26,114,184,.12)'">
+        
+        <!-- Top badge -->
+        <div style="background: linear-gradient(135deg,#0f5490,#1a72b8); padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #5cb85c; animation: pulse 1.4s infinite;"></div>
+            <span style="font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.85);">Community Outreach</span>
+          </div>
+          <span style="font-size: 10px; color: rgba(255,255,255,.5); font-weight: 500;">April 14, 2026</span>
+        </div>
+
+        <!-- VIDEO THUMBNAIL PLAYER — Click to play -->
+        <div class="video-player" data-video-id="1uRrXogu8eQ" style="position: relative; padding-bottom: 177.78%; background: #000; cursor: pointer;">
+          <img 
+            src="https://img.youtube.com/vi/1uRrXogu8eQ/maxresdefault.jpg" 
+            alt="Free Health Camp Video"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.src='https://img.youtube.com/vi/ot6Y-4qj2UA/hqdefault.jpg'"
+          >
+          <!-- Gradient Overlay -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,.4) 0%, transparent 40%);"></div>
+          
+          <!-- Play Button -->
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(255,0,0,.5); transition: transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translate(-50%, -50%) scale(1.1)';this.style.boxShadow='0 6px 32px rgba(255,0,0,.7)'" onmouseout="this.style.transform='translate(-50%, -50%) scale(1)';this.style.boxShadow='0 4px 24px rgba(255,0,0,.5)'">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          
+          <!-- YouTube Logo -->
+          <div style="position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,.7); padding: 4px 10px; border-radius: 4px; display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span style="color: #fff; font-size: 11px; font-weight: 500;">YouTube</span>
+          </div>
+
+          <!-- Watch Text -->
+          <div style="position: absolute; bottom: 16px; left: 16px; color: #fff; font-size: 12px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,.5);">
+            ▶ Click to Play
+          </div>
+        </div>
+
+        <!-- Card Info -->
+        <div style="padding: 24px 22px;">
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(61,166,0,.1); border: 1px solid rgba(61,166,0,.2); padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#3da600" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span style="font-size: 10px; font-weight: 700; color: #3da600; letter-spacing: .1em; text-transform: uppercase;">Free Health Camp</span>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 10px;">Free Health Check-Up Camp — Nashik</h3>
+          <p style="font-size: 13px; color: var(--mid); line-height: 1.7;">Our community health initiative on April 14, 2026 — free medical consultations, BP checks, blood sugar tests, ECG and more for the people of Nashik.</p>
+          <a href="https://youtube.com/shorts/1uRrXogu8eQ" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; font-size: 12px; font-weight: 700; color: var(--blue); letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: gap .2s;" onmouseover="this.style.gap='12px'" onmouseout="this.style.gap='7px'">
+            Open in YouTube
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- VIDEO 2 — Hospital Tour -->
+      <div class="reveal d1" style="background: #fff; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 40px rgba(26,114,184,.12); border: 1.5px solid rgba(26,114,184,.1); transition: transform .3s, box-shadow .3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 24px 64px rgba(26,114,184,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 40px rgba(26,114,184,.12)'">
+        
+        <!-- Top badge -->
+        <div style="background: linear-gradient(135deg,#00876c,#00a896); padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #fff; opacity: .8;"></div>
+            <span style="font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.85);">Hospital Tour</span>
+          </div>
+          <span style="font-size: 10px; color: rgba(255,255,255,.5); font-weight: 500;">Nashik 2026</span>
+        </div>
+
+        <!-- VIDEO THUMBNAIL PLAYER -->
+        <div class="video-player" data-video-id="ClT2dX_hwdA" style="position: relative; padding-bottom: 177.78%; background: #000; cursor: pointer;">
+          <img 
+            src="https://img.youtube.com/vi/ClT2dX_hwdA/maxresdefault.jpg" 
+            alt="Hospital Tour Video"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.src='https://img.youtube.com/vi/ClT2dX_hwdA/hqdefault.jpg'"
+          >
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,.4) 0%, transparent 40%);"></div>
+          
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(255,0,0,.5); transition: transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translate(-50%, -50%) scale(1.1)';this.style.boxShadow='0 6px 32px rgba(255,0,0,.7)'" onmouseout="this.style.transform='translate(-50%, -50%) scale(1)';this.style.boxShadow='0 4px 24px rgba(255,0,0,.5)'">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          
+          <div style="position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,.7); padding: 4px 10px; border-radius: 4px; display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span style="color: #fff; font-size: 11px; font-weight: 500;">YouTube</span>
+          </div>
+          
+          <div style="position: absolute; bottom: 16px; left: 16px; color: #fff; font-size: 12px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,.5);">
+            ▶ Click to Play
+          </div>
+        </div>
+
+        <!-- Card Info -->
+        <div style="padding: 24px 22px;">
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(0,168,150,.1); border: 1px solid rgba(0,168,150,.2); padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#00a896" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <span style="font-size: 10px; font-weight: 700; color: #00a896; letter-spacing: .1em; text-transform: uppercase;">Hospital Facilities</span>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 10px;">Inside Godavari Hospital — Full Tour</h3>
+          <p style="font-size: 13px; color: var(--mid); line-height: 1.7;">Explore our 32-bed facility — Modular OT, ICU, Pathology Lab, Labour Room, Deluxe Rooms and all our world-class infrastructure.</p>
+          <a href="https://youtube.com/shorts/ClT2dX_hwdA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; font-size: 12px; font-weight: 700; color: #00a896; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: gap .2s;" onmouseover="this.style.gap='12px'" onmouseout="this.style.gap='7px'">
+            Open in YouTube
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- VIDEO 3 — Dr. Sandip Summer Tips -->
+      <div class="reveal d2" style="background: #fff; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 40px rgba(26,114,184,.12); border: 1.5px solid rgba(26,114,184,.1); transition: transform .3s, box-shadow .3s;" onmouseover="this.style.transform='translateY(-8px)';this.style.boxShadow='0 24px 64px rgba(26,114,184,.18)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 40px rgba(26,114,184,.12)'">
+        
+        <!-- Top badge -->
+        <div style="background: linear-gradient(135deg,#d4510a,#ff6b2b); padding: 16px 22px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #fff; opacity: .8;"></div>
+            <span style="font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.85);">Doctor's Advice</span>
+          </div>
+          <span style="font-size: 10px; color: rgba(255,255,255,.5); font-weight: 500;">Summer 2026</span>
+        </div>
+
+        <!-- VIDEO THUMBNAIL PLAYER -->
+        <div class="video-player" data-video-id="ot6Y-4qj2UA" style="position: relative; padding-bottom: 177.78%; background: #000; cursor: pointer;">
+          <img 
+            src="https://img.youtube.com/vi/ot6Y-4qj2UA/maxresdefault.jpg" 
+            alt="Summer Health Tips Video"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.src='https://img.youtube.com/vi/1uRrXogu8eQ/hqdefault.jpg'"
+          >
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,.4) 0%, transparent 40%);"></div>
+          
+          <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 72px; height: 72px; background: #ff0000; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 24px rgba(255,0,0,.5); transition: transform .2s, box-shadow .2s;" onmouseover="this.style.transform='translate(-50%, -50%) scale(1.1)';this.style.boxShadow='0 6px 32px rgba(255,0,0,.7)'" onmouseout="this.style.transform='translate(-50%, -50%) scale(1)';this.style.boxShadow='0 4px 24px rgba(255,0,0,.5)'">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          
+          <div style="position: absolute; bottom: 16px; right: 16px; background: rgba(0,0,0,.7); padding: 4px 10px; border-radius: 4px; display: flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            <span style="color: #fff; font-size: 11px; font-weight: 500;">YouTube</span>
+          </div>
+          
+          <div style="position: absolute; bottom: 16px; left: 16px; color: #fff; font-size: 12px; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,.5);">
+            ▶ Click to Play
+          </div>
+        </div>
+
+        <!-- Card Info -->
+        <div style="padding: 24px 22px;">
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,107,43,.08); border: 1px solid rgba(255,107,43,.2); padding: 4px 12px; border-radius: 100px; margin-bottom: 12px;">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ff6b2b" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><circle cx="12" cy="16" r="1" fill="#ff6b2b"/></svg>
+            <span style="font-size: 10px; font-weight: 700; color: #ff6b2b; letter-spacing: .1em; text-transform: uppercase;">Expert Health Tips</span>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 10px;">Summer Health Tips by Dr. Sandip Patil</h3>
+          <p style="font-size: 13px; color: var(--mid); line-height: 1.7;">Dr. Sandip Patil (MD Medicine, Intensivist) shares essential guidelines to stay healthy, prevent heat stroke & dehydration this summer season.</p>
+          <a href="https://youtube.com/shorts/ot6Y-4qj2UA" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; font-size: 12px; font-weight: 700; color: #ff6b2b; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: gap .2s;" onmouseover="this.style.gap='12px'" onmouseout="this.style.gap='7px'">
+            Open in YouTube
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- end videos-grid -->
+
+    <!-- YouTube Subscribe Button -->
+    <div style="text-align: center; margin-top: 52px;" class="reveal">
+      <p style="font-size: 14px; color: var(--mid); margin-bottom: 20px;">Subscribe to our YouTube channel for more health tips, doctor advice & hospital updates</p>
+      <a href="https://www.youtube.com/@GodavariMultispecialityHospita" target="_blank" rel="noopener"
+        style="display: inline-flex; align-items: center; gap: 10px; background: #ff0000; color: #fff; padding: 14px 32px; border-radius: 100px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; box-shadow: 0 8px 28px rgba(255,0,0,.3); transition: all .3s;"
+        onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 36px rgba(255,0,0,.4)'"
+        onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 28px rgba(255,0,0,.3)'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Explore Our YouTube Channel
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Responsive CSS -->
+  <style>
+    @media (max-width: 1000px) {
+      .videos-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 640px) {
+      .videos-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .video-player {
+      transition: opacity .3s;
+    }
+    .video-player:hover {
+      opacity: 0.95;
+    }
+  </style>
+
+</section>
+
+<!-- Simple JavaScript to handle clicks -->
+<script>
+document.querySelectorAll('.video-player').forEach(player => {
+  player.addEventListener('click', function(e) {
+    const videoId = this.dataset.videoId;
+    // Opens YouTube Shorts in new tab
+    window.open(`https://youtube.com/shorts/${videoId}`, '_blank');
+  });
+});
+</script>
+<!-- ══ END VIDEOS SECTION ══ -->
+
 <!-- ══ FEATURED DOCTOR ══ -->
 <section class="section dr-section" id="doctor">
   <div class="wrap">
