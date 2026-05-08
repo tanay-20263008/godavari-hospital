@@ -1076,18 +1076,33 @@ footer { background: linear-gradient(to bottom, #1a5fa8 0%, #0a2d5c 40%, #06183a
   <div class="wrap">
     <div class="about-grid">
       <div class="about-vis reveal">
-        <div class="about-img-card">
-          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);text-align:center;z-index:1;">
-  <div style="font-family:var(--font-display);font-size:120px;font-weight:700;color:rgba(26,114,184,.08);line-height:1;">2021</div>
-  <div style="font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);opacity:.4;">Est. Year</div>
+  <div class="about-img-card" style="padding:0;min-height:460px;overflow:hidden;position:relative;">
+  
+  <!-- Hospital Building Photo -->
+  <img 
+    src="assets/hospital-building.jpg" 
+    alt="Godavari Multispeciality Hospital Building — Satpur, Nashik" 
+    style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;top:0;left:0;border-radius:var(--r-lg);"
+    loading="lazy" decoding="async"
+  >
+
+  <!-- Dark gradient overlay so text is readable -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,30,60,.85) 0%, rgba(10,30,60,.3) 50%, transparent 100%);border-radius:var(--r-lg);"></div>
+
+  <!-- Bottom text over photo -->
+  <div class="about-card-inner" style="position:absolute;bottom:0;left:0;right:0;padding:32px 36px;z-index:2;">
+    <div class="about-chip">Established in Nashik · 2021</div>
+    <div class="about-card-title" style="color:#fff;">Godavari Multispeciality Hospital & Research Center Pvt Ltd</div>
+    <div class="about-card-sub" style="color:rgba(255,255,255,.7);">Plot H-29, Satpur MIDC Road, Nashik – 422007</div>
+  </div>
+
+  <!-- 32 Bed badge -->
+  <div class="about-badge" style="z-index:3;">
+    <div class="ab-n">32</div>
+    <div class="ab-l">Bed Facility</div>
+  </div>
+
 </div>
-          <div class="about-card-inner">
-            <div class="about-chip">Established in Nashik</div>
-            <div class="about-card-title">Godavari Multispeciality Hospital & Research Center Pvt Ltd</div>
-            <div class="about-card-sub">Satpur MIDC Road, Nashik – 422007</div>
-          </div>
-          <div class="about-badge"><div class="ab-n">32</div><div class="ab-l">Bed Facility</div></div>
-        </div>
         <div class="about-stats-bar">
           <div class="asb-item"><div class="asb-n">50+</div><div class="asb-l">Specialist Consultant</div></div>
           <div class="asb-item"><div class="asb-n">24  X 7</div><div class="asb-l">Emergency</div></div>
